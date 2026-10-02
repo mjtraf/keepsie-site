@@ -6,6 +6,9 @@
   --sage: #4E6B45;
   --line: #CDBFA6;
   --butter: #F0DDA6;
+  --on-bg: #3A2A1E;
+  --sub-on-bg: #6B5646;
+  --link-on-bg: #4E6B45;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -16,13 +19,16 @@
     --sage: #2F4A29;
     --line: #6E6A67;
     --butter: #C9B982;
+    --on-bg: #F7F3EE;
+    --sub-on-bg: #E4DDD3;
+    --link-on-bg: #CFE3C4;
   }
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--ink);
+  color: var(--on-bg);
   font-family: "Patrick Hand", "Segoe UI", system-ui, sans-serif;
   font-size: 19px;
   line-height: 1.5;
@@ -30,7 +36,7 @@ body {
 main { max-width: 720px; margin: 0 auto; padding: 28px 16px 64px; }
 header.top { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
 header.top img { width: 64px; height: 64px; border-radius: 16px; border: 2px solid var(--ink); }
-header.top a { color: var(--ink); text-decoration: none; }
+header.top a { color: var(--on-bg); text-decoration: none; }
 h1, h2, .brand { font-family: "Gaegu", "Patrick Hand", cursive; font-weight: 700; line-height: 1.1; }
 .brand { font-size: 38px; }
 h1 { font-size: 40px; margin: 8px 0 4px; }
@@ -38,10 +44,12 @@ h2 { font-size: 27px; margin: 0 0 6px; }
 p { margin: 0 0 12px; }
 ul { margin: 0 0 12px; padding-left: 22px; }
 li { margin-bottom: 6px; }
-a { color: var(--sage); }
-.updated { color: var(--sub); font-size: 17px; margin-bottom: 18px; }
+a { color: var(--link-on-bg); }
+.card a { color: var(--sage); }
+.updated { color: var(--sub-on-bg); font-size: 17px; margin-bottom: 18px; }
 .card {
   background: var(--card);
+  color: var(--ink);
   border: 2px solid var(--ink);
   border-radius: 18px;
   padding: 18px 18px 8px;
@@ -62,4 +70,4 @@ nav.links a {
   font-size: 21px;
 }
 nav.links a.main { background: var(--sage); color: #fff; }
-footer { color: var(--sub); font-size: 16px; margin-top: 28px; border-top: 2px dashed var(--line); padding-top: 14px; }
+footer { color: var(--sub-on-bg); font-size: 16px; margin-top: 28px; border-top: 2px dashed var(--line); padding-top: 14px; }
